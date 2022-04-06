@@ -1,7 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import "./style.css";
 import Header from "../header";
-import Download from "../download";
 
 function Carousel() {
   const [scroll, setScroll] = useState(false);
@@ -47,7 +46,6 @@ function Carousel() {
 
       <div className="noSrollArea">
         <Header {...{ scroll }} />
-        {!scroll && <Download />}
       </div>
     </div>
   );

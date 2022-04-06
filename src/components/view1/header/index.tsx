@@ -1,4 +1,5 @@
 import { css } from "@emotion/css";
+import Download from "../download";
 function Header({ scroll }: { scroll: boolean }) {
   const cssHeader = css`
     color: #fff;
@@ -7,7 +8,7 @@ function Header({ scroll }: { scroll: boolean }) {
     top: 40%;
     left: 30px;
     @media screen and (min-width: 1200px) {
-      top: 30%;
+      top: 32%;
       left: 10%;
     }
   `;
@@ -53,16 +54,16 @@ function Header({ scroll }: { scroll: boolean }) {
     font-size: 70px;
     text-shadow: 0px 0px 1px #999;
     @media screen and (min-width: 1200px) {
-      font-size: 140px;
+      font-size: 150px;
     }
   `;
 
   const cssH3 = css`
-    font-weight: 400;
+    font-weight: 500;
     font-size: 40px;
     text-shadow: 0px 0px 1px #999;
     @media screen and (min-width: 1200px) {
-      font-size: 53px;
+      font-size: 42px;
     }
   `;
   return (
@@ -74,6 +75,7 @@ function Header({ scroll }: { scroll: boolean }) {
           超越通訊軟體，LINE為用戶建構全新的溝通型態與豐富的數位生活，成為用戶生活中不可或缺的平台。
         </p>
       )}
+      {!scroll && <Download />}
     </header>
   );
 }

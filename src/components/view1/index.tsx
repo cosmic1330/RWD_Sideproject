@@ -1,5 +1,6 @@
 import Carousel from "./carousel";
 import { css } from "@emotion/css";
+import Scroll from "./scroll";
 
 function View1() {
   const cssView1 = css`
@@ -11,6 +12,7 @@ function View1() {
   return (
     <div className={cssView1}>
       <Carousel />
+      <Scroll />
     </div>
   );
 }
