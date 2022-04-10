@@ -1,5 +1,5 @@
 import { css, keyframes } from "@emotion/css";
-
+import { useState, useEffect, useCallback } from "react";
 const bounce = keyframes`
   0% {
     top:0%;
@@ -24,9 +24,9 @@ const bounce2 = keyframes`
 `;
 
 const cssScroll = css`
-    visibility: hidden;
+  visibility: hidden;
   @media screen and (min-width: 1200px) {
-    visibility:initial;
+    visibility: initial;
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -58,11 +58,26 @@ const cssScroll = css`
   }
 `;
 function Scroll() {
-  return (
-    <div className={cssScroll}>
-      <span>Scroll</span>
-      <div className="line"></div>
-    </div>
-  );
+  const [scroll, setScroll] = useState(false);
+
+  const handleScroll = useCallback(() => {
+    setScroll(window.scrollY > 0);
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  
+  if (scroll) return <></>;
+  else
+    return (
+      <div className={cssScroll}>
+        <span>Scroll</span>
+        <div className="line"></div>
+      </div>
+    );
 }
 export default Scroll;
