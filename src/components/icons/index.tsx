@@ -1,0 +1,9 @@
+export { default as BusinessIcon } from "./BusinessIcon";
+export { default as EntertainmentIcon } from "./EntertainmentIcon";
+export { default as EveryThingIcon } from "./EveryThingIcon";
+export { default as GeneralIcon } from "./GeneralIcon";
+export { default as HealthIcon } from "./HealthIcon";
+export { default as HotNewIcon } from "./HotNewIcon";
+export { default as ScienceIcon } from "./ScienceIcon";
+export { default as SportsIcon } from "./SportsIcon";
+export { default as TechnologyIcon } from "./TechnologyIcon";
