@@ -1,7 +1,8 @@
 {
-  "name": "my-vue-app",
+  "name": "my_side_shop",
   "private": true,
   "version": "0.0.0",
+  "homepage": ".",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

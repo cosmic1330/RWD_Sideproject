@@ -16,7 +16,7 @@ function App() {
   return (
     <StyledEngineProvider injectFirst>
       <CssBaseline />
-      <Router>
+      <Router basename="/">
         <Routes>
           <Route path="/" element={<Navigate replace to="/face/hot" />} />
           <Route

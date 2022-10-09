@@ -15,7 +15,7 @@ import {
   SportsIcon,
   TechnologyIcon,
 } from "../../components/icons";
-import { FaceContext } from "../../context/face";
+import { FaceContext, Response } from "../../context/face";
 
 const CssNavbar = styled("nav")`
   width: 200px;
@@ -72,7 +72,19 @@ export default function Navbar() {
         console.log(response.data);
         setData(response.data["articles"]);
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        console.log(error);
+        const fakeArticles: Response[] = [
+          {
+            author: null,
+            title: "【Fake】《Neon White》：繼《吸血鬼倖存者》的下個精神時光屋",
+            url: "https://news.google.com/__i/rss/rd/articles/CBMiKmh0dHBzOi8vd3d3LnRoZW5ld3NsZW5zLmNvbS9hcnRpY2xlLzE3NDQxNNIBAA?oc=5",
+            urlToImage: null,
+            publishedAt: "2022-10-08T23:56:01Z",
+          },
+        ];
+        setData(fakeArticles);
+      });
   }, [selected, search]);
 
   return (

@@ -6,18 +6,18 @@ import {
   useState,
 } from "react";
 
-type Response = {
-  urlToImage: string;
-  title: string;
-  author: string;
+export type Response = {
+  urlToImage: string | null;
+  title: string | null;
+  author: string | null;
   publishedAt: string;
-  url: string;
+  url: string | null;
 };
 
 type initialFaceContext = {
   data: Response[];
-  setData: Dispatch<SetStateAction<never[]>>;
-  search: string;
+  setData: Dispatch<SetStateAction<Response[] | never[]>>;
+  search: string | null;
   setSearch: Dispatch<SetStateAction<string>>;
 };
 
@@ -34,7 +34,7 @@ type Prop = {
 export const FaceContext = createContext<initialFaceContext>(init);
 
 export function FaceContextProvider({ children }: Prop) {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<Response[] | never[]>([]);
   const [search, setSearch] = useState("");
   return (
     <FaceContext.Provider value={{ data, setData, search, setSearch }}>
