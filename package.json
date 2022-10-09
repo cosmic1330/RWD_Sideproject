@@ -2,7 +2,7 @@
   "name": "my_side_shop",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://cosmic1330.github.io/my_side_sho",
+  "homepage": "https://cosmic1330.github.io/my_side_shop/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
