@@ -23,10 +23,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: Install and Build
-      run:
-        npm install
-        npm run build
-        ls
+      run: npm install && npm run build && ls
         
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
