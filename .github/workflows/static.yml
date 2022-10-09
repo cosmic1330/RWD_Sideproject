@@ -1,4 +1,4 @@
-name: Build and Deploy Demo
+name: CI/CD
 on:
   push:
     branches:
@@ -26,6 +26,7 @@ jobs:
       run:
         npm install
         npm run build
+        mv dist build
         
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3

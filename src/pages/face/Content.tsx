@@ -49,7 +49,7 @@ export default function Content() {
           <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
             <Paper>
               <Section
-                href={value.url}
+                href={value?.url ? value.url : "#"}
                 target="_blank"
                 rel="noopener noreferrer"
               >
