@@ -76,10 +76,11 @@ export default function Navbar() {
         console.log(error);
         const fakeArticles: Response[] = [
           {
-            author: null,
+            author: "限定使用localhost",
             title: "【Fake】《Neon White》：繼《吸血鬼倖存者》的下個精神時光屋",
-            url: "https://news.google.com/__i/rss/rd/articles/CBMiKmh0dHBzOi8vd3d3LnRoZW5ld3NsZW5zLmNvbS9hcnRpY2xlLzE3NDQxNNIBAA?oc=5",
-            urlToImage: null,
+            url: "#",
+            urlToImage:
+              "http://i1.hdslb.com/bfs/archive/b7ecb4bfbe6b75e7db9fad3cdee39c0f4955a82d.jpg",
             publishedAt: "2022-10-08T23:56:01Z",
           },
         ];

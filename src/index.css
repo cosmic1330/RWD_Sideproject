@@ -12,10 +12,6 @@ code {
     monospace;
 }
 
-body {
-  height: 200vh;
-}
-
 * {
   padding: 0;
   margin: 0;

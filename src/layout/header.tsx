@@ -1,17 +1,18 @@
 import { css } from "@emotion/css";
 import SearchIcon from "@mui/icons-material/Search";
+import Button from "@mui/material/Button";
 import FilledInput from "@mui/material/FilledInput";
 import InputAdornment from "@mui/material/InputAdornment";
 import { debounce } from "lodash-es";
 import { useContext, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import Logo from "../Bing-logo.png";
 import { FaceContext } from "../context/face";
 
 const cssHeader = css`
   padding: 18px;
   display: flex;
-  align-items: center;
-  gap: 20px;
+  justify-content: space-between;
   box-shadow: 0px 0px 2px #333;
   position: fixed;
   top: 0;
@@ -37,18 +38,31 @@ const cssOutline = {
     background-color: #fff;
   `,
 };
+
+const cssAlighItem = css`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+`;
+
 export default function Header() {
   const { setSearch } = useContext(FaceContext);
+  const navigate = useNavigate();
   const debouncedSearch = useRef(
     debounce(async (e) => {
       setSearch(e.target.value);
     }, 800)
   ).current;
 
+  function handleClick() {
+    navigate("/line");
+  }
+
   return (
     <header className={cssHeader}>
-      <img className={cssImg} src={Logo} />
-      <div>
+      <div className={cssAlighItem}>
+        <img className={cssImg} src={Logo} />
+
         <FilledInput
           classes={cssOutline}
           disableUnderline={true}
@@ -60,6 +74,9 @@ export default function Header() {
           }
         />
       </div>
+      <Button variant="text" color="success" onClick={handleClick}>
+        Line
+      </Button>
     </header>
   );
 }
