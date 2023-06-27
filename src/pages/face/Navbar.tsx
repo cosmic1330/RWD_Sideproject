@@ -16,6 +16,7 @@ import {
   TechnologyIcon,
 } from "../../components/icons";
 import { FaceContext, Response } from "../../context/face";
+import notfound from "../../images/notfound.png";
 
 const CssNavbar = styled("nav")`
   width: 200px;
@@ -79,8 +80,7 @@ export default function Navbar() {
             author: "限定使用localhost",
             title: "【Fake】《Neon White》：繼《吸血鬼倖存者》的下個精神時光屋",
             url: "#",
-            urlToImage:
-              "http://i1.hdslb.com/bfs/archive/b7ecb4bfbe6b75e7db9fad3cdee39c0f4955a82d.jpg",
+            urlToImage: notfound,
             publishedAt: "2022-10-08T23:56:01Z",
           },
         ];
