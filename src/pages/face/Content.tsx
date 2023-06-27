@@ -6,6 +6,7 @@ import {
 import { styled } from "@mui/material/styles";
 import { useContext } from "react";
 import { FaceContext } from "../../context/face";
+import notfound from "../../images/notfound.png";
 
 const Section = styled("a")`
   width: 100%;
@@ -41,6 +42,7 @@ const Container = styled(MuiContainer)`
 
 export default function Content() {
   const { data } = useContext(FaceContext);
+  console.log(data);
 
   return (
     <Container>
@@ -57,7 +59,7 @@ export default function Content() {
                   src={
                     value?.urlToImage
                       ? value.urlToImage
-                      : "http://tva3.sinaimg.cn/large/006APoFYjw1favb6avdpoj30dc0dcwen.jpg"
+                      : notfound
                   }
                 />
                 <div className="other">
