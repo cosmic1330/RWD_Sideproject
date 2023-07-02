@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import useQuery from "./hooks/useQuery";
 import View1 from "./view1";
 import View2 from "./view2";
+import View3 from "./view3";
 
 function Line() {
   const query = useQuery();
@@ -13,6 +14,7 @@ function Line() {
     <div className="Line">
       <View1 />
       <View2 />
+      <View3 />
     </div>
   );
 }

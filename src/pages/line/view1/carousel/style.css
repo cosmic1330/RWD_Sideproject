@@ -34,7 +34,7 @@
 @keyframes animate1 {
   0% {
     opacity: 0;
-    transform: scale(1);
+    transform: scale(1.2);
   }
   25% {
     opacity: 1;
@@ -47,7 +47,7 @@
   }
   100% {
     opacity: 0;
-    transform: scale(1.2);
+    transform: scale(1);
   }
 }
 

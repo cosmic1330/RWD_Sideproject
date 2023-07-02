@@ -7,7 +7,6 @@ function View1() {
     position: relative;
     width: 100%;
     height: 100vh;
-    border-bottom: 1px solid #000;
     @media screen and (min-width: 1200px) {
       margin-bottom: 200px;
     }
