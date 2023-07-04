@@ -1,6 +1,6 @@
-import { useState, useEffect, useCallback } from "react";
-import "./style.css";
+import { useCallback, useEffect, useState } from "react";
 import Header from "../header";
+import "./style.css";
 
 function Carousel() {
   const [scroll, setScroll] = useState(false);
@@ -38,6 +38,7 @@ function Carousel() {
       <ul className={scroll ? "scroll lists" : "lists"}>
         {Array.from(Array(images)).map((value, index) => (
           <li
+            key={index}
             style={img(index)}
             className={active === index || next === index ? "animate" : ""}
           />

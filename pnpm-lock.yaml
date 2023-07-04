@@ -34,6 +34,7 @@ specifiers:
   react-router-dom: ^6.4.2
   styled-components: ^5.3.5
   typescript: ^4.6.3
+  vanilla-tilt: ^1.8.0
   vite: ^2.9.1
 
 dependencies:
@@ -62,6 +63,7 @@ dependencies:
   react-redux: 8.1.1_051d0161cfa989686603c33c54e1ec96
   react-router-dom: 6.14.0_react-dom@17.0.2+react@17.0.2
   styled-components: 5.3.11_44d0279a5db4bf2bffbaf1e33bda5b18
+  vanilla-tilt: 1.8.0
 
 devDependencies:
   '@types/lodash-es': 4.17.7
@@ -2909,6 +2911,10 @@ packages:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
       react: 17.0.2
+    dev: false
+
+  /vanilla-tilt/1.8.0:
+    resolution: {integrity: sha512-wVCHyyfRuiRdKhDTNxKPb60lkagmywDSqLgFETEr71Sm646AvGxuf/14Kx9A8FaISyYvMoKQHk6FTqt+YLGhEw==}
     dev: false
 
   /vite/2.9.16:
