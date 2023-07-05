@@ -21,6 +21,7 @@
     "@mui/styled-engine-sc": "^5.5.2",
     "@types/node": "^18.8.3",
     "axios": "^1.1.2",
+    "cannon": "^0.6.2",
     "eslint": "^8.25.0",
     "formik": "^2.2.9",
     "i18next": "^21.10.0",
@@ -37,6 +38,7 @@
     "react-redux": "^8.0.4",
     "react-router-dom": "^6.4.2",
     "styled-components": "^5.3.5",
+    "three": "^0.154.0",
     "vanilla-tilt": "^1.8.0"
   },
   "devDependencies": {

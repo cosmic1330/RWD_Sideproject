@@ -5,7 +5,7 @@ import FilledInput from "@mui/material/FilledInput";
 import InputAdornment from "@mui/material/InputAdornment";
 import { debounce } from "lodash-es";
 import { useContext, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import Logo from "../Bing-logo.png";
 import { FaceContext } from "../context/face";
 
@@ -54,7 +54,7 @@ export default function Header() {
     }, 800)
   ).current;
 
-  function handleClick() {
+  function handleToLine() {
     navigate("/line");
   }
 
@@ -74,9 +74,16 @@ export default function Header() {
           }
         />
       </div>
-      <Button variant="text" color="success" onClick={handleClick}>
-        Line
-      </Button>
+      <div>
+        <Button variant="text" color="success" onClick={handleToLine}>
+          Line
+        </Button>
+        <Link to="/three">
+          <Button variant="text" color="info">
+            Three
+          </Button>
+        </Link>
+      </div>
     </header>
   );
 }

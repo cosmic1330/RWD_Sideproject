@@ -7,6 +7,7 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
+import Three from "./pages/three";
 
 const Face = lazy(() => import("./pages/face"));
 const Line = lazy(() => import("./pages/line"));
@@ -32,6 +33,14 @@ function App() {
             element={
               <Suspense fallback={""}>
                 <Line />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/three"
+            element={
+              <Suspense fallback={""}>
+                <Three />
               </Suspense>
             }
           />
