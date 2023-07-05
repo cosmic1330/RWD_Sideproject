@@ -4,7 +4,7 @@ const Canvas = styled.div`
   width: 50%;
 `;
 
-const Item = styled.div`
-
+const Button = styled.button`
+padding: 10px 20px;
 `;
-export { Canvas, Item };
+export { Canvas, Button };

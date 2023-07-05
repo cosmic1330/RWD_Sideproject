@@ -44,7 +44,7 @@ const Connon = () => {
       let sphereBody = new CANNON.Body({
         // Step 2 为形状添加刚体
         mass: 5, // 公斤
-        position: new CANNON.Vec3(0, 15, 0),
+        position: new CANNON.Vec3(0, 10, 0),
         shape: sphereShape,
         material: sphereCM,
       });
